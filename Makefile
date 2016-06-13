@@ -43,7 +43,7 @@ clean:
 
 install:
 	find . -type f -regex ".*.so" -exec sh -c '${INSTALL} -t ${schemedir}/$$(dirname $$1) $$1' _ {} \;
-	${INSTALL} -t ${DOCDIR} README irregex.html irregex.css
+	${INSTALL} -t ${DOCDIR} README README.chez irregex.html irregex.css
 
 install-src:
 	find . -type f -regex "irregex.s\(ls\|cm\)" -exec sh -c '${INSTALL} -t ${schemedir}/$$(dirname $$1) $$1' _ {} \;
